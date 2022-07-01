@@ -1,6 +1,16 @@
 name: first
 
-on: push
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+    # can only use branches OR branches-ignore
+    # branches-ignore:
+    #   - dev
+    #   - 'feature/another-branch-to-ignore'
 
 jobs:
   job1:
